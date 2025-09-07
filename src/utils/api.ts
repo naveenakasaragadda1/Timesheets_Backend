@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://timesheet-backend-production-283f.up.railway.app/api',
+  baseURL: 'https://timesheet-server-gkd8.onrender.com/api',
 });
 
 // Attach token to every request
