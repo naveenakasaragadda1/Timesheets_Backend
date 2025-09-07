@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://timesheet-backend-production-283f.up.railway.app/api',
+  baseURL: 'https://timesheet-server-gkd8.onrender.com/api',
 });
 
 instance.interceptors.request.use((config) => {
