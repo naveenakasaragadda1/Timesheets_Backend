@@ -20,7 +20,7 @@ const AdminEmployees: React.FC = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get('https://timesheet-backend-production-283f.up.railway.app/api/admin/employees', {
+      const res = await axios.get('https://timesheet-server-gkd8.onrender.com/api/admin/employees', {
 
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -42,11 +42,11 @@ const AdminEmployees: React.FC = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`https://timesheet-backend-production-283f.up.railway.app/api/admin/employees/${editingId}`, form, {
+        await axios.put(`https://timesheet-server-gkd8.onrender.com/api/admin/employees/${editingId}`, form, {
           headers: { Authorization: `Bearer ${token}` }
         });
       } else {
-        await axios.post('https://timesheet-backend-production-283f.up.railway.app/api/admin/employees', form, {
+        await axios.post('https://timesheet-server-gkd8.onrender.com/api/admin/employees', form, {
           headers: { Authorization: `Bearer ${token}` }
         });
       }
@@ -67,7 +67,7 @@ const AdminEmployees: React.FC = () => {
   const handleDelete = async (id: string) => {
     if (!window.confirm('Are you sure you want to delete this employee?')) return;
     try {
-      await axios.delete(`https://timesheet-backend-production-283f.up.railway.app/api/admin/employees/${id}`, {
+      await axios.delete(`https://timesheet-server-gkd8.onrender.com/api/admin/employees/${id}`, {
 
         headers: { Authorization: `Bearer ${token}` }
       });
