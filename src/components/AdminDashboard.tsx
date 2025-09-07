@@ -23,7 +23,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onTabChange }) => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('https://timesheet-backend-production-283f.up.railway.app/api/admin/dashboard', {
+        const res = await axios.get('https://timesheet-server-gkd8.onrender.com/api/admin/dashboard', {
 
           headers: {
             Authorization: `Bearer ${token}`,
