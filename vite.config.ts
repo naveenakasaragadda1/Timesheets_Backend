@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-       target: 'https://timesheet-backend-production-283f.up.railway.app',
+       target: '//timesheet-server-gkd8.onrender.com',
         changeOrigin: true,
         secure: false,
       },
